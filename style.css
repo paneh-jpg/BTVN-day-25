@@ -54,10 +54,14 @@
 }
 
 .dots button {
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: none;
+
   background: #ffffff;
   cursor: pointer;
 }
