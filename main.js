@@ -1,9 +1,9 @@
-const container = document.querySelector("#mySlider");
+const container = document.querySelector("#my-slideshow");
 const track = container.firstElementChild;
 const slides = track.children;
 const prevBtn = container.querySelector(".prev");
 const nextBtn = container.querySelector(".next");
-const dotsWrapper = container.querySelector(".dots");
+const navigation = container.querySelector(".navigation");
 
 let total = slides.length;
 let index = 0;
@@ -32,7 +32,7 @@ function move(step) {
 const dots = [];
 
 function createDots() {
-  dotsWrapper.innerHTML = "";
+  navigation.innerHTML = "";
   let cur = track.firstElementChild;
   let i = 0;
   while (cur) {
@@ -44,7 +44,7 @@ function createDots() {
       update();
       updateDots();
     });
-    dotsWrapper.appendChild(dot);
+    navigation.appendChild(dot);
     dots.push(dot);
     cur = cur.nextElementSibling;
     i++;
