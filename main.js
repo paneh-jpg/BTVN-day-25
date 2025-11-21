@@ -19,6 +19,7 @@ function setUpWidths() {
 function update(isInstance) {
   track.style.transition = isInstance ? "none" : "transform 0.3s ease";
   track.style.transform = `translateX(-${index * slideWidth}px)`;
+  updateDots();
 }
 
 function move(step) {
@@ -57,8 +58,8 @@ function updateDots() {
 }
 
 setUpWidths();
-update();
 createDots();
+update();
 
 prevBtn.addEventListener("click", () => move(-1));
 nextBtn.addEventListener("click", () => move(1));
